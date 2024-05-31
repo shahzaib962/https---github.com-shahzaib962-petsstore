@@ -147,7 +147,7 @@
             },
 
             async created() {
-                let course = await fetch("http://localhost:3000/lesson")
+                let course = await fetch("https://https-github-com-shahzaib962-pets-backend.onrender.com/lesson")
                 let result = await course.json()
                 this.lessons = result
                 console.log(result)
@@ -164,7 +164,7 @@
                 //         });
                 // },
                 filteredList() {
-                    fetch(`http://localhost:3000/collection/lesson/search?key_word=${this.search}`)
+                    fetch(`https://https-github-com-shahzaib962-pets-backend.onrender.com/collection/lesson/search?key_word=${this.search}`)
                         .then(response => response.json())
                         .then(data => {
                             this.lessons = data;
@@ -206,7 +206,7 @@
                         cartProduct: this.cart,
                     };
 
-                    fetch("http://localhost:3000/collection/order", {
+                    fetch("https://https-github-com-shahzaib962-pets-backend.onrender.com/collection/order", {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json",
